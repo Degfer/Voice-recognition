@@ -4,6 +4,7 @@ import os
 import sys
 import webbrowser
 
+from datetime import datetime
 
 def talk(words):
     print(words)
@@ -34,6 +35,9 @@ def makeSomething(task):
         talk("Already opening")
         url = 'https://vk.com/public_lar'
         webbrowser.open(url)
+    elif 'date'.lower() in task:
+        current_date = datetime.now().date()
+        print(current_date)
     elif 'stop'.lower() in task:
         talk("Yes of course without problems")
         sys.exit()
