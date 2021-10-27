@@ -47,7 +47,7 @@ def makeSomething(task):
             talk("Good day")
         if 17 <= datetime.now().hour <= 22:
             talk("Good evening")
-        if (4 <= datetime.now().hour <= 22) or (0 <= datetime.now().hour <= 4):
+        if (22 <= datetime.now().hour <= 23) or (0 <= datetime.now().hour <= 4):
             talk("Goodnight")
 
         current_time = datetime.now().time()
