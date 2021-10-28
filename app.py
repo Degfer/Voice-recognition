@@ -43,15 +43,15 @@ def makeSomething(task):
 
     elif 'time'.lower() in task:
 
-        if 5 <= datetime.now().hour <= 17:
+        if 5 <= datetime.now().hour < 17:
             talk("Good day")
-        if 17 <= datetime.now().hour <= 22:
+        if 17 <= datetime.now().hour < 22:
             talk("Good evening")
         if (22 <= datetime.now().hour <= 23) or (0 <= datetime.now().hour <= 4):
             talk("Goodnight")
 
-        current_time = datetime.now().time()
-        print(current_time)
+        print(str(datetime.now().hour) + '-hour', str(datetime.now().minute) + '-minute')
+
 
     elif 'stop'.lower() in task:
         talk("Yes of course without problems")
